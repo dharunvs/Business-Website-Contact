@@ -7,16 +7,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
+    <script src="./app.js"></script>
     <title>Business</title>
 </head>
 <body>
     <header>
         <nav>
-            <div id="logo">Business</div>
+            <div id="logo" onclick="pageAnimate('landing')">Business</div>
             <ul class="nav-links">
-                <li><a href="/">Contact</a></li>
+                <li><a href="#" onclick="pageAnimate('contact')">Contact</a></li>
             </ul>
         </nav>
     </header>
+
+    <div id="pages" class="pages">
+        <div class="landing page"></div>
+        <div class="contact page"></div>
+    </div>
+
 </body>
 </html>
