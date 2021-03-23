@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: rgb(125, 192, 255);
+}
+header {
+  height: 10vh;
+  width: 100%;
+  background-color: rgb(185, 223, 255);
+}
+
+nav {
+  height: 10vh;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 100;
+}
+
+#logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
