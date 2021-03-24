@@ -13,7 +13,17 @@ function addData(){
     var contactNo = getValues('contactNo');
     var message = getValues('message');
     var time = new Date()
+
+    let fields = ['name', 'company', 'email', 'contactNo', 'message']
     var timeString = time.getDate()+'/'+(parseInt(time.getMonth())+1)+'/'+time.getFullYear()+' '+time.getHours()+':'+time.getMinutes();
+
+    for (i in fields){
+        if (getValues(fields[i]) == ''){
+            getElement(fields[i]).style.border = '2px solid red'
+        }
+    }
+
+
 
     saveValues(name, company, email,  contactNo, message, timeString);
 
@@ -27,6 +37,10 @@ function addData(){
 
 function getValues(id){
     return document.getElementById(id).value;
+}
+
+function getElement(id){
+    return document.getElementById(id);
 }
 
 function saveValues(name, company, email,  contactNo, message, time){

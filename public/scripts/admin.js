@@ -1,10 +1,7 @@
-let docRef = database.doc('9T2r7seL0pDgQkM7o4hE');
-
 database
 .get()
 .then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
-        console.log(doc.data());
         createElement(doc.data())
     });
 })
@@ -107,12 +104,19 @@ function createElement(doc){
     enquiryContainer.appendChild(wrapper2);
     enquiryContainer.appendChild(wrapper3);
 
-    button.addEventListener('click', deleteEnquiry);
+    button.addEventListener('click', () => {
+        database
+        .get()
+        .then(querySnapshot => {
+          const documents = querySnapshot.docs.map(doc => doc.data())
+          for (i in documents){
+              if (documents[i].time == doc.time){
+                documents[i].delete()   
+              }   
+          }
+        })
+    });
 
     let admin = document.getElementById('admin');
     admin.appendChild(enquiryContainer)
-}
-
-function deleteEnquiry(){
-
 }
