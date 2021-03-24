@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' >
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
-    <script src="./app.js"></script>
-    <title id="title">VibrantDX</title>
+    <title id="title">Vibrant DX</title>
 </head>
 <body>
-    <div id="water-mark">TEST</div>
+    <!-- <div id="water-mark">TEST</div> -->
     <header>
         <nav>
-            <div id="logo" onclick="pageAnimate('landing')">VibrantDX</div>
+            <div id="logo" onclick="pageAnimate('landing')">Vibrant DX</div>
             <ul class="nav-links">
-                <li><a href="#" onclick="pageAnimate('contact')">Contact Us</a></li>
+                <li><a onclick="pageAnimate('contact')">Contact Us</a></li>
             </ul>
         </nav>
     </header>
@@ -27,7 +26,7 @@
         <div class="landing page">
             <div class="landing-wrapper">
                 <div class="landing-content">
-                    <h1>VibrantDX</h1>
+                    <h1>Vibrant DX</h1>
                     <ul>
                         <li>Diagnostics Products</li>
                         <li>Sales</li>
@@ -75,7 +74,7 @@
                                     <input type="text" id="name">
                                 </div>
                                 <div class="company group2">
-                                    <label for="company">Company/Organisation</label><br>
+                                    <label for="company">Company</label><br>
                                     <input type="text" id="company">
                                 </div>
                             </div>
@@ -86,8 +85,8 @@
                                     <input type="text" id="email">
                                 </div>
                                 <div class="contactno group2">
-                                    <label for="contactno">Contact No</label><br>
-                                    <input type="text" id="contactno">
+                                    <label for="contactNo">Contact No</label><br>
+                                    <input type="text" id="contactNo">
                                 </div>
                             </div>
                             
@@ -111,9 +110,9 @@
         </div>
 
     </div>
-<!-- <script>
-    const pages = document.getElementById('pages')
-    pages.style.transform = "translateX(-100%)"
-</script> -->
+
+<script src="./app.js"></script>
+<script src="./enquiry.js"></script>
+
 </body>
 </html>

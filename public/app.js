@@ -3,10 +3,10 @@ function pageAnimate(page){
     var title = document.getElementById('title');
     if (page == 'contact'){
         pages.style.transform = "translateX(-100%)"
-        title.innerText = 'VibrantDX - Contact'
+        title.innerText = 'Vibrant DX - Contact'
     } else if ( page == 'landing'){
         pages.style.transform = "translateX(0%)"
-        title.innerText = 'VibrantDX'
+        title.innerText = 'Vibrant DX'
     }
 
 }

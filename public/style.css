@@ -227,6 +227,11 @@ button[type="submit"]:hover {
     grid-template-rows: 3fr 5fr;
   }
 
+  .contact-wrapper,
+  .landing-wrapper {
+    width: 90%;
+  }
+
   .contact-wrapper {
     top: 48%;
     height: 75vh;
