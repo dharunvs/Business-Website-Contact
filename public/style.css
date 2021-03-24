@@ -12,6 +12,7 @@ body {
 }
 a {
   color: #485e74;
+  text-decoration: none;
 }
 header {
   height: 10vh;
@@ -39,11 +40,13 @@ nav {
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 100;
+  cursor: pointer;
 }
 
 #logo {
   font-size: 2rem;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .pages {
@@ -221,6 +224,13 @@ button[type="submit"]:hover {
   z-index: 20000;
 }
 
+.admin {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  z-index: 500000;
+}
+
 @media (max-width: 770px) {
   .contact-box {
     grid-template-columns: none;
@@ -269,5 +279,10 @@ button[type="submit"]:hover {
     font-size: 20rem;
     transform: rotate(-45deg);
     z-index: 20000;
+  }
+
+  .admin {
+    bottom: 3px;
+    left: 5px;
   }
 }
