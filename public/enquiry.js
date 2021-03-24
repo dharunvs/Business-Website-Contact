@@ -1,3 +1,16 @@
+var firebaseConfig = {
+    apiKey: "AIzaSyCnL12Io88jjL85wimfjEB5MrVSTyIC_mQ",
+    authDomain: "vibrant-dx.firebaseapp.com",
+    projectId: "vibrant-dx",
+    storageBucket: "vibrant-dx.appspot.com",
+    messagingSenderId: "102853405585",
+    appId: "1:102853405585:web:09d9f4bb27d6f203044830"
+};
+
+firebase.initializeApp(firebaseConfig);
+
+let contactInfo = firebase.database().ref('contactInfo')
+
 const form = document.getElementById('contact-form');
 
 form.addEventListener('submit', (e) => {
@@ -18,5 +31,18 @@ function getValues(id){
 }
 
 function saveValues(name, company, email,  contactNo, message){
-    console.log(name, company, email,  contactNo, message);
+
+    let newContactInfo = contactInfo.push();
+
+    newContactInfo.set({
+        name: name,
+        company: company,
+        email: email,
+        contactNo: contactNo,
+        message: message,
+    })
+
+    console.log("!!")
+
 }
+
