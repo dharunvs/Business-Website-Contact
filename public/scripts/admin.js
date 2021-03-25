@@ -111,7 +111,7 @@ function createElement(doc){
           const documents = querySnapshot.docs.map(doc => doc.data())
           for (i in documents){
               if (documents[i].time == doc.time){
-                documents[i].delete()   
+                documents[i].delete()
               }   
           }
         })
