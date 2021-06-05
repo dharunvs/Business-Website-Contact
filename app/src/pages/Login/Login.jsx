@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import { Formik, Form } from "formik";
 import fb from "../../services/firebase";
 import { initialValues, validationSchema } from "./formikConfig";
-import { AuthFormField, ServerError } from "../../components/AuthFormField";
+import { FormFieldClass } from "../../components";
 import "./Login.css";
 
 function Login() {
@@ -29,7 +29,6 @@ function Login() {
       })
       .finally(() => {
         setSubmitting(false);
-        localStorage.setItem("userId", fb.auth.currentUser?.uid);
       });
   };
 
@@ -47,8 +46,8 @@ function Login() {
           >
             {({ isValid, isSubmitting }) => (
               <Form>
-                <AuthFormField label="Email" name="email" autoComplete="on" />
-                <AuthFormField
+                <p>Admin</p>
+                <FormFieldClass.FormField
                   label="Password"
                   name="password"
                   type="password"
@@ -61,22 +60,10 @@ function Login() {
                 >
                   Log in
                 </button>
-
-                <div className="auth-link-container">
-                  Don't have an account?
-                  <span
-                    className="auth-link"
-                    onClick={() => {
-                      history.push("signup");
-                    }}
-                  >
-                    Sign Up
-                  </span>
-                </div>
               </Form>
             )}
           </Formik>
-          <ServerError serverError={serverError} />
+          <FormFieldClass.ServerError serverError={serverError} />
         </div>
       </div>
     </div>
