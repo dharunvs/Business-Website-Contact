@@ -7,7 +7,6 @@ import { FormFieldClass } from "../../components";
 import "./Login.css";
 
 function Login() {
-  const history = useHistory();
   const [serverError, setServerError] = useState("");
 
   const login = ({ password }, { setSubmitting }) => {
