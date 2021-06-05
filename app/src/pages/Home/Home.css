@@ -1,0 +1,18 @@
+.Home {
+  width: 100%;
+  min-height: 90vh;
+  background-color: var(--violet2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homeContainer {
+  width: 80%;
+  margin: auto;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
