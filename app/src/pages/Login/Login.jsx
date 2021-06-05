@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useHistory } from "react-router-dom";
 import { Formik, Form } from "formik";
 import fb from "../../services/firebase";
 import { initialValues, validationSchema } from "./formikConfig";
@@ -33,38 +32,36 @@ function Login() {
 
   return (
     <div className="Login">
-      <h2 className="logo auth-logo">Forms</h2>
-      <div className="auth-form-wrapper">
-        <div className="auth-form-container">
-          <h1>Log in</h1>
-          <Formik
-            onSubmit={login}
-            validateOnMount={true}
-            initialValues={initialValues}
-            validationSchema={validationSchema}
-          >
-            {({ isValid, isSubmitting }) => (
-              <Form>
-                <p>Admin</p>
-                <FormFieldClass.FormField
-                  label="Password"
-                  name="password"
-                  type="password"
-                />
+      <Formik
+        onSubmit={login}
+        validateOnMount={true}
+        initialValues={initialValues}
+        validationSchema={validationSchema}
+      >
+        {({ isValid, isSubmitting }) => (
+          <Form>
+            <h1>Admin Login</h1>
 
-                <button
-                  className="auth-button"
-                  disabled={isSubmitting || !isValid}
-                  type="submit"
-                >
-                  Log in
-                </button>
-              </Form>
-            )}
-          </Formik>
-          <FormFieldClass.ServerError serverError={serverError} />
-        </div>
-      </div>
+            <p className="admin">Admin</p>
+            <FormFieldClass.FormField
+              label="Password"
+              name="password"
+              type="password"
+            />
+
+            <button
+              className="loginButton"
+              disabled={isSubmitting || !isValid}
+              type="submit"
+            >
+              Log in
+            </button>
+            <div className="serverErrorContainer">
+              <FormFieldClass.ServerError serverError={serverError} />
+            </div>
+          </Form>
+        )}
+      </Formik>
     </div>
   );
 }

@@ -7,10 +7,16 @@
     sans-serif;
 }
 
+:root {
+  --violet: rgb(133, 105, 243);
+  --violet2: rgb(107, 84, 201);
+}
+
 html,
 body {
   width: 100%;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--violet);
 }

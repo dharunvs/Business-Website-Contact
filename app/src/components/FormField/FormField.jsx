@@ -9,13 +9,13 @@ export function FormField({
   return (
     <label>
       <Field
-        className="form-field"
+        className="formField"
         type={type}
         name={name}
         placeholder={label}
         autoComplete={autoComplete}
       />
-      <div className="error-container">
+      <div className="errorContainer">
         <ErrorMessage className="error" component="p" name={name} />
       </div>
     </label>
@@ -23,9 +23,5 @@ export function FormField({
 }
 
 export function ServerError({ serverError }) {
-  return (
-    <div className="error-container">
-      <div className="error">{serverError}</div>
-    </div>
-  );
+  return <div className="error">{serverError}</div>;
 }

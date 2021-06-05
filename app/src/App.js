@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Switch, Route, useHistory, useLocation } from "react-router-dom";
 import { useAuth, useResolved } from "./hooks";
 import { Navbar } from "./components";
-import { Home, Admin, Login } from "./pages";
+import { Home, Admin, Login, Contact } from "./pages";
 import "./App.css";
 
 function App() {
@@ -13,11 +13,12 @@ function App() {
 
   useEffect(() => {
     if (authResolved) {
-      if (location.pathname !== "/") {
+      if (location.pathname === "/admin") {
         history.push(!!authUser ? "/admin" : "login");
       }
     }
-  }, [authResolved, authUser, history]);
+  }, [authResolved, authUser]);
+
   return (
     <Switch>
       <Route path="/admin" component={Admin} />
@@ -25,6 +26,7 @@ function App() {
       <>
         <Navbar />
         <Route exact path="/" component={Home} />
+        <Route exact path="/contact" component={Contact} />
       </>
     </Switch>
   );
