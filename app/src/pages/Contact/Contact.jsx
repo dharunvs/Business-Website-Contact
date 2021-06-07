@@ -1,6 +1,7 @@
 import { Form, Formik } from "formik";
 import { FormFieldClass } from "../../components";
 import { initialValues, validationSchema } from "./formikConfig";
+import { Symbols } from "../../components";
 import "./Contact.css";
 
 function Contact() {
@@ -9,29 +10,35 @@ function Contact() {
   return (
     <div className="Contact">
       <div className="contactContainer">
-        <div className="information">
+        <div className="info">
           <h1>Address</h1>
-          <div className="address">
-            <p>
-              3A-Kumaran street,
-              <br />
-              Balambigai Flats,
-              <br />
-              Keelkattalai,
-              <br />
-              Chennai - 600 117
-            </p>
-          </div>
-          <div className="phn group">
-            <p>+91 9360157929</p>
-          </div>
-          <div className="email group">
-            <p>
-              <a href="mailto:vibrantdx@gmail.com">vibrantdx@gmail.com</a>
-            </p>
+
+          <div className="infoContainer">
+            <div className="group">
+              <Symbols.Location size="24" />
+              <p>
+                3A-Kumaran street,
+                <br />
+                Balambigai Flats,
+                <br />
+                Keelkattalai,
+                <br />
+                Chennai - 600 117
+              </p>
+            </div>
+            <div className="group">
+              <Symbols.Phone size="24" />
+              <p>+91 9360157929</p>
+            </div>
+            <div className="group">
+              <Symbols.Mail size="24" />
+              <p>
+                <a href="mailto:vibrantdx@gmail.com">vibrantdx@gmail.com</a>
+              </p>
+            </div>
           </div>
         </div>
-        <div className="line"></div>
+        {/* <div className="line"></div> */}
         <Formik
           validateOnMount={true}
           validationSchema={validationSchema}
