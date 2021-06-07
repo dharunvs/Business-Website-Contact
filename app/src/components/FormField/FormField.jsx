@@ -5,6 +5,7 @@ export function FormField({
   label,
   type = "text",
   autoComplete = "off",
+  rows = "1",
 }) {
   return (
     <label>
@@ -14,6 +15,30 @@ export function FormField({
         name={name}
         placeholder={label}
         autoComplete={autoComplete}
+        rows={rows}
+      />
+      <div className="errorContainer">
+        <ErrorMessage className="error" component="p" name={name} />
+      </div>
+    </label>
+  );
+}
+
+export function FormTextArea({
+  name,
+  label,
+  autoComplete = "off",
+  rows = "1",
+}) {
+  return (
+    <label>
+      <Field
+        className="formTextArea"
+        name={name}
+        placeholder={label}
+        autoComplete={autoComplete}
+        component="textarea"
+        rows={rows}
       />
       <div className="errorContainer">
         <ErrorMessage className="error" component="p" name={name} />

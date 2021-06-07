@@ -1,0 +1,190 @@
+/* .Contact {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Contact > form {
+  width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.Contact > form > div {
+  width: 100%;
+  display: flex;
+  border: 1px solid red;
+}
+.Contact > form > div .formField {
+  width: 100%;
+  border: 1px solid green;
+}
+.Contact > form > h1 {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  color: rgb(110, 110, 110);
+  letter-spacing: 1px;
+}
+
+.Contact > form .submitButton,
+.Contact > form .formField {
+  width: 100%;
+  background-color: rgb(235, 235, 235);
+  border: 1px solid rgb(235, 235, 235);
+  color: rgb(110, 110, 110);
+  font-size: 1rem;
+  border-radius: 2px;
+  outline: none;
+  resize: none;
+}
+
+.Contact > form .submitButton {
+  background-color: var(--violet);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.Contact > form .submitButton:hover {
+  background-color: var(--violet2);
+}
+
+.Contact > form .submitButton:disabled {
+  background-color: rgb(235, 235, 235);
+  border: 1px solid rgb(235, 235, 235);
+  color: rgb(197, 197, 197);
+  cursor: not-allowed;
+}
+
+.errorContainer {
+  min-height: 20px;
+  text-align: left;
+}
+
+.serverErrorContainer {
+  min-height: 30px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error {
+  min-height: 18px;
+  font-size: 0.8rem;
+  color: red;
+} */
+
+.Contact {
+  width: 100%;
+  min-height: 90vh;
+  background-color: var(--violet2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactContainer {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+.Contact h1 {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  color: rgb(110, 110, 110);
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.Contact * {
+  margin: 0;
+  padding: 0;
+}
+
+.Contact form {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.Contact .information {
+  width: 100%;
+  display: block;
+}
+
+.Contact .information > * {
+  border: 1px solid red;
+}
+
+.Contact form > div {
+  display: flex;
+  width: 540px;
+  margin: auto;
+  border: 1 px solid red;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Contact form div .formField,
+.Contact form div .formTextArea,
+.Contact form div > button {
+  background-color: rgb(235, 235, 235);
+  border: 1px solid rgb(235, 235, 235);
+  color: rgb(110, 110, 110);
+  font-size: 1rem;
+  border-radius: 2px;
+  padding: 10px;
+  outline: none;
+  resize: none;
+}
+
+.Contact form div .formField {
+  width: 260px;
+}
+.Contact form div .formTextArea {
+  width: 540px;
+}
+
+.Contact form > div > button {
+  width: 100%;
+  background-color: var(--violet);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.Contact form > div > button:hover {
+  background-color: var(--violet2);
+}
+
+.Contact form > div > button:disabled {
+  background-color: rgb(235, 235, 235);
+  border: 1px solid rgb(235, 235, 235);
+  color: rgb(197, 197, 197);
+  cursor: not-allowed;
+}
+
+.line {
+  width: 1px;
+  background-color: var(--violet);
+  height: 50vh;
+}

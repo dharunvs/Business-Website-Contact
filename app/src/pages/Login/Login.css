@@ -38,6 +38,7 @@
   font-size: 1rem;
   border-radius: 2px;
   outline: none;
+  resize: none;
 }
 
 .formField,

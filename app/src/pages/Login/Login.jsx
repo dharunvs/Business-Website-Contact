@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Formik, Form } from "formik";
-import fb from "../../services/firebase";
+import fb from "../../services/fb";
 import { initialValues, validationSchema } from "./formikConfig";
 import { FormFieldClass } from "../../components";
 import "./Login.css";

@@ -1,4 +1,4 @@
-import fb from "../services/firebase";
+import fb from "../services/fb";
 import { useEffect, useState } from "react";
 
 function useAuth() {

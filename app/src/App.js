@@ -3,7 +3,6 @@ import { Switch, Route, useHistory, useLocation } from "react-router-dom";
 import { useAuth, useResolved } from "./hooks";
 import { Navbar } from "./components";
 import { Home, Admin, Login, Contact } from "./pages";
-import "./App.css";
 
 function App() {
   const history = useHistory();
