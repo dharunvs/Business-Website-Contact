@@ -8,6 +8,19 @@ import { useEffect, useState } from "react";
 
 function Contact() {
   const [num, setNum] = useState(0);
+  var currentdate = new Date();
+  var datetime =
+    currentdate.getDate() +
+    "/" +
+    (currentdate.getMonth() + 1) +
+    "/" +
+    currentdate.getFullYear() +
+    " @ " +
+    currentdate.getHours() +
+    ":" +
+    currentdate.getMinutes() +
+    ":" +
+    currentdate.getSeconds();
 
   useEffect(() => {
     fb.firestore
@@ -33,6 +46,7 @@ function Contact() {
         email: email,
         contactNo: contactNo,
         message: message,
+        time: datetime,
       })
       .then(() => {
         setNum(num + 1);

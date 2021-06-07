@@ -12,3 +12,16 @@
   justify-content: space-between;
   color: white;
 }
+
+.navBarContainer h1,
+.navBarContainer p {
+  user-select: none;
+}
+
+.navBarContainer p {
+  font-weight: 500;
+  cursor: pointer;
+}
+.navBarContainer p:hover {
+  color: rgb(219, 219, 219);
+}

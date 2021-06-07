@@ -15,7 +15,7 @@ const validationSchema = yup.object().shape({
     .min(3, "Must atleast be 3 characters"),
   company: yup.string().optional("Optional"),
   email: yup.string().required("Required").email("Invalid email"),
-  contactNo: yup.string().required("Required"),
+  contactNo: yup.number().typeError("Invalid phone no").required("Required"),
   message: yup.string().required("Required"),
 });
 

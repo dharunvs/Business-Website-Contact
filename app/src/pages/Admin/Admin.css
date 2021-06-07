@@ -1,0 +1,82 @@
+.adminLogo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+}
+
+.message {
+  width: 500px;
+  background-color: white;
+  border-radius: 5px;
+  margin: 20px auto;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.message > div {
+  display: flex;
+  margin: 20px auto;
+  border: 1 px solid red;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.message div label {
+  width: 48%;
+  background-color: rgb(235, 235, 235);
+  border: 1px solid rgb(235, 235, 235);
+  color: rgb(110, 110, 110);
+  font-size: 1rem;
+  border-radius: 2px;
+  padding: 10px;
+  overflow-wrap: break-word;
+
+  outline: none;
+  resize: none;
+}
+
+.message div .messageMessage {
+  width: 100%;
+  overflow-wrap: break-word;
+}
+
+.message div label p {
+  font-size: 0.8rem;
+}
+
+.message div label h4 {
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+.adminHeight {
+  height: 10vh;
+  width: 100%;
+}
+
+.deleteButton {
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  background-color: var(--violet);
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.deleteButton:hover {
+  background-color: var(--violet2);
+}
+
+.time {
+  font-style: italic;
+  color: rgb(110, 110, 110);
+  font-size: 15px;
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+}
