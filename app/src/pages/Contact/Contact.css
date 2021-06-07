@@ -15,6 +15,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: white;
+  border-radius: 5px;
 }
 
 .Contact form h1 {

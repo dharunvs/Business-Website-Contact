@@ -15,4 +15,39 @@
   align-items: center;
   justify-content: center;
   background-color: white;
+  border-radius: 5px;
+}
+
+.homeContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.homeContent h1 {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 4rem;
+  color: rgb(110, 110, 110);
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.homeContent ul {
+  margin: auto;
+  list-style: none;
+}
+
+.Services,
+.Sales,
+.Products,
+.Consults {
+  fill: var(--violet);
+  margin-right: 10px;
+}
+
+.homeContent ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
