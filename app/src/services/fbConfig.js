@@ -5,13 +5,13 @@ import "firebase/firestore";
 
 try {
   firebase.initializeApp({
-    apiKey: "AIzaSyCOCB4AuAKZKDMFfew-AM0xoaGOStPVbRE",
-    authDomain: "vibrant-d-x.firebaseapp.com",
-    projectId: "vibrant-d-x",
-    storageBucket: "vibrant-d-x.appspot.com",
-    messagingSenderId: "845073598824",
-    appId: "1:845073598824:web:97e6647f642f9f81d06edd",
-    measurementId: "G-YZH0KCTJQH",
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGIN_SENDER_ID,
+    appId: process.env.REACT_APP_APP_ID,
+    measurementId: process.env.REACT_APP_MEASUREMENT_ID,
   });
 } catch (error) {
   if (!/already exists/u.test(error.message)) {
