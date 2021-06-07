@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useHistory } from "react-router";
 import { Formik, Form } from "formik";
 import fb from "../../services/fb";
 import { initialValues, validationSchema } from "./formikConfig";
@@ -6,6 +7,7 @@ import { FormFieldClass } from "../../components";
 import "./Login.css";
 
 function Login() {
+  const history = useHistory();
   const [serverError, setServerError] = useState("");
 
   const login = ({ password }, { setSubmitting }) => {
@@ -27,6 +29,7 @@ function Login() {
       })
       .finally(() => {
         setSubmitting(false);
+        history.push("admin");
       });
   };
 
@@ -59,6 +62,7 @@ function Login() {
             <div className="serverErrorContainer">
               <FormFieldClass.ServerError serverError={serverError} />
             </div>
+            <p className="resetPassword">Forgot/Reset password ?</p>
           </Form>
         )}
       </Formik>

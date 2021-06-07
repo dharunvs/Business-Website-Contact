@@ -1,11 +1,53 @@
 import { Form, Formik } from "formik";
+import fb from "../../services/fb";
 import { FormFieldClass } from "../../components";
 import { initialValues, validationSchema } from "./formikConfig";
 import { Symbols } from "../../components";
 import "./Contact.css";
+import { useEffect, useState } from "react";
 
 function Contact() {
-  const contact = () => {};
+  const [num, setNum] = useState(0);
+
+  useEffect(() => {
+    fb.firestore
+      .collection("Root")
+      .doc("AdditionalData")
+      .get()
+      .then((doc) => {
+        setNum(doc.data().Number);
+      });
+  }, []);
+
+  const contact = (
+    { name, company, email, contactNo, message },
+    { setSubmitting }
+  ) => {
+    fb.firestore
+      .collection("Messages")
+      .doc(`Message${num}`)
+      .set({
+        MessageID: `Message${num}`,
+        name: name,
+        company: company,
+        email: email,
+        contactNo: contactNo,
+        message: message,
+      })
+      .then(() => {
+        setNum(num + 1);
+        fb.firestore
+          .collection("Root")
+          .doc("AdditionalData")
+          .update({
+            Number: num + 1,
+          });
+        window.location.reload();
+      })
+      .finally(() => {
+        setSubmitting(false);
+      });
+  };
 
   return (
     <div className="Contact">

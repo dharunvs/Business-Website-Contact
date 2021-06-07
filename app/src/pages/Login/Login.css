@@ -95,3 +95,13 @@
   font-size: 0.8rem;
   color: red;
 }
+
+.resetPassword {
+  margin-bottom: 20px;
+  color: rgb(110, 110, 110);
+  cursor: pointer;
+}
+
+.resetPassword:hover {
+  color: var(--violet2);
+}

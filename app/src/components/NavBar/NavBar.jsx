@@ -6,16 +6,6 @@ function NavBar() {
   const history = useHistory();
   const location = useLocation();
 
-  // const [contact, setContact] = useState(false);
-
-  // useEffect(() => {
-  //   if (location.pathname == "/contact") {
-  //     setContact(true);
-  //   } else {
-  //     setContact(false);
-  //   }
-  // }, [location]);
-
   return (
     <div className="NavBar">
       <div className="navBarContainer">

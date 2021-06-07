@@ -9,9 +9,12 @@ const initialValues = {
 };
 
 const validationSchema = yup.object().shape({
-  name: yup.string().required("Required"),
+  name: yup
+    .string()
+    .required("Required")
+    .min(3, "Must atleast be 3 characters"),
   company: yup.string().optional("Optional"),
-  email: yup.string().required("Required"),
+  email: yup.string().required("Required").email("Invalid email"),
   contactNo: yup.string().required("Required"),
   message: yup.string().required("Required"),
 });
