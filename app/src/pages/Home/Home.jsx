@@ -9,16 +9,16 @@ function Home() {
           <h1>Vibrant DX</h1>
           <ul>
             <li>
-              <Symbols.Products size="22" /> Diagnostics Products
+              <Symbols.Products size="30" /> Diagnostics Products
             </li>
             <li>
-              <Symbols.Sales size="22" /> Sales
+              <Symbols.Sales size="30" /> Sales
             </li>
             <li>
-              <Symbols.Services size="22" /> Services
+              <Symbols.Services size="30" /> Services
             </li>
             <li>
-              <Symbols.Consults size="22" /> Consultants
+              <Symbols.Consults size="30" /> Consultants
             </li>
           </ul>
         </div>

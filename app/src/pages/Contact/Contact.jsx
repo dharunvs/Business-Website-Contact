@@ -68,7 +68,6 @@ function Contact() {
       <div className="contactContainer">
         <div className="info">
           <h1>Address</h1>
-
           <div className="infoContainer">
             <div className="group">
               <Symbols.Location size="24" />
@@ -94,7 +93,9 @@ function Contact() {
             </div>
           </div>
         </div>
-        {/* <div className="line"></div> */}
+
+        <div className="line"></div>
+
         <Formik
           validateOnMount={true}
           validationSchema={validationSchema}

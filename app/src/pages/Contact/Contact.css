@@ -12,10 +12,11 @@
   height: 70vh;
   margin: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   background-color: white;
   border-radius: 5px;
+  z-index: 10;
 }
 
 .Contact form h1 {
@@ -41,7 +42,7 @@
 }
 
 .Contact .info {
-  width: 100%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,7 +59,7 @@
 }
 
 .Contact .info .infoContainer {
-  width: 50%;
+  width: 200px;
 }
 
 .Contact .info .infoContainer .group {
@@ -75,7 +76,6 @@
   display: flex;
   width: 540px;
   margin: auto;
-  border: 1 px solid red;
   align-items: center;
   justify-content: space-between;
 }
@@ -124,7 +124,7 @@
 .Phone,
 .Mail,
 .Location {
-  fill: rgb(110, 110, 110);
+  fill: var(--violet);
 }
 
 a {
@@ -134,4 +134,75 @@ a {
 
 a:hover {
   color: var(--violet2);
+}
+
+@media screen and (max-width: 1000px) {
+  .contactContainer {
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+  .line {
+    width: 90%;
+    margin: 20px auto 10px auto;
+    height: 1px;
+    background-color: var(--violet);
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .Contact form > div {
+    width: 450px;
+  }
+
+  .Contact form div .formField {
+    width: 220px;
+  }
+
+  .Contact form div .formTextArea {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Contact form h1,
+  .Contact .info h1 {
+    font-size: 1rem;
+  }
+
+  .Contact .info .infoContainer .group {
+    display: flex;
+    margin: 10px 0;
+    font-size: 0.9rem;
+  }
+
+  .Contact form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .Contact form > div {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .Contact form > div .formField {
+    width: 300px;
+  }
+  .Contact form > div .formTextArea {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .Contact form > div .formField {
+    width: 250px;
+  }
+  .Contact form > div .formTextArea {
+    width: 250px;
+  }
 }
