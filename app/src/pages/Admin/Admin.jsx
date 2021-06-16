@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import fb from "../../services/fb";
 import "./Admin.css";
 
 function Admin() {
+  const history = useHistory();
   const [messages, setMessages] = useState([]);
 
   var messagesData = fb.firestore.collection("Messages");
@@ -71,6 +73,17 @@ function Admin() {
     <div className="Admin">
       <div className="adminLogo">
         <h1>Vibrant DX</h1>
+      </div>
+      <div className="logout">
+        <button
+          onClick={() => {
+            fb.auth.signOut();
+            localStorage.clear();
+            history.push("/");
+          }}
+        >
+          Logout
+        </button>
       </div>
       <div className="adminHeight"></div>
       <div className="messages">
